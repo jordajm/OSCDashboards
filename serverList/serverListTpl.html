@@ -1,0 +1,13 @@
+<md-content class="md-padding" layout="row" layout-wrap>
+  <div flex="25" ng-repeat="server in serverListCtrl.servers">
+  	<md-card class="server-status-card" ng-click="serverListCtrl.showBottomSheet($event, $index)">
+    		<md-card-content>
+          <div class="server-status-img" ng-style="{{serverListCtrl.serverStatusImg($index)}}">
+            <h2>{{server.name}}</h2>
+          </div>
+      		<h3>{{server.host}}</h3>
+          <h3>{{server.roles}}</h3>
+    		</md-card-content>
+    </md-card>
+  </div>
+</md-content>
