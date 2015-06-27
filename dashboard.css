@@ -1,18 +1,42 @@
 .server-status-card {
 	text-align: center;
+  min-height: 262px;
+}
+.module-status-card {
+  text-align: center;
+}
+.module-status-card:hover {
+  cursor: pointer;
 }
 .server-status-card:hover {
 	cursor: pointer;
 }
 .server-status-img {
-	width: 100%;
-	height: 234px;
+	width: 50%;
+  height: 90px;
+  margin: auto;
+  background-size: cover !important;
+}
+.status-ok {
+  background: url(/u/213392662/OSCDashboards/img/server-ok-sm.png) no-repeat;
+}
+.status-warn {
+  background: url(/u/213392662/OSCDashboards/img/server-warn-sm.png) no-repeat;
+}
+.status-err {
+  background: url(/u/213392662/OSCDashboards/img/server-err-sm.png) no-repeat;
 }
 .server-status-img h2 {
 	text-align: center;
 	padding-top: 30%;
   	font-size: 1.7em;
   	margin: 0;
+}
+.server-host {
+  margin: 5px 0;
+}
+.server-roles {
+  margin: 0;
 }
 .server-list-bottom-sheet .close-btn {
   float: right;
@@ -41,6 +65,51 @@
 }
 .server-list-bottom-sheet #modules-tabs .clickable-table {
   cursor: pointer;
+}
+.server-list-bottom-sheet .exec-list {
+  height: 357px;
+  overflow: auto;
+}
+
+.server-list-bottom-sheet #module-action-card {
+  padding: 8px;
+}
+
+#module-details-modal h3 {
+  margin-top: 0;
+}
+
+#module-details-modal table, #module-details-modal th {
+  text-align: center;
+}
+
+.exec-card-header h2 {
+  float: left;
+}
+
+.exec-card-header p {
+  float: right;
+  margin-top: 5px;
+}
+
+.exec-card-header span {
+  float: right;
+}
+
+.exec-card-header p:hover, .exec-card-header span:hover {
+  cursor: pointer;
+}
+
+.exec-list td.button-cell {
+  padding: 8px 0;
+  text-align: right;
+}
+
+.exec-list td.button-cell button {
+  min-width: 68px;
+  margin: 0 4px;
+  line-height: 25px;
+  min-height: 25px;
 }
 
 

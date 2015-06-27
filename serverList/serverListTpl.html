@@ -1,12 +1,14 @@
 <md-content class="md-padding" layout="row" layout-wrap>
-  <div flex="25" ng-repeat="server in serverListCtrl.servers">
+  <div flex="20" ng-repeat="server in serverListCtrl.servers | orderBy:'status'">
   	<md-card class="server-status-card" ng-click="serverListCtrl.showBottomSheet($event, $index)">
     		<md-card-content>
-          <div class="server-status-img" ng-style="{{serverListCtrl.serverStatusImg($index)}}">
-            <h2>{{server.name}}</h2>
+          <div class="server-status-img" 
+               ng-class="{'status-ok': true, 'status-warn': server.status == 2, 'status-err': server.status == 1}">
           </div>
-      		<h3>{{server.host}}</h3>
-          <h3>{{server.roles}}</h3>
+      		<h3 class="server-host">{{server.status}}</h3>
+          <h3 class="server-roles">{{server.ip}}</h3>
+          <hr/>
+          <h3 class="server-roles" ng-repeat="role in server.roles">{{role}}</h3>
     		</md-card-content>
     </md-card>
   </div>
